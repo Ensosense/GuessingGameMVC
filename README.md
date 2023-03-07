@@ -1,1 +1,2 @@
-# GuessingGameMVC created with Spring MVC and Thymeleaf
+# GuessingGameMVC 
+Created with Spring MVC and Thymeleaf
