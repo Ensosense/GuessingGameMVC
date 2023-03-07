@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+</head>
+<body>
+Please enter a number: <br/>
+<form method="post" action="http://localhost:8080/guess">
+    <input name="tal" type="text" size="8" value=""/>
+    <br/>
+    <input name="submit" type="submit" value="Send"/>
+</form>
+<p th:text="${result}"></p>
+<table>
+    <thead>
+    <tr>
+        <th>Guesses:</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="guess : ${guesses}">
+        <td th:text="${guess}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
