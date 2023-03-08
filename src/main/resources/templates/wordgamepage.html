@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Word game</title>
+</head>
+<body>
+<h3 style="font-family: sans-serif">Please enter a word:</h3>
+
+<form method="post" action="http://localhost:8080/wordguess">
+    <input name="word" type="text" size="8" value=""/>
+    <br/>
+    <input name="submit" type="submit" value="Send"/>
+</form>
+<p th:text="${wordresult}"></p>
+<table>
+    <thead>
+    <tr>
+        <tp style="font-family: sans-serif">Guesses:</tp>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="guess : ${wordguesses}">
+        <td th:text="${guess}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
