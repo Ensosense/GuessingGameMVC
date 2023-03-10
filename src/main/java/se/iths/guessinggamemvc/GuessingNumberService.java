@@ -1,5 +1,6 @@
 package se.iths.guessinggamemvc;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.SessionScope;
 
@@ -11,6 +12,9 @@ import java.util.Random;
 @SessionScope
 public class GuessingNumberService {
 
+    @Autowired
+    private UserService userService;
+
     int secret;
     Random random = new Random();
     List<String> guesses;
@@ -20,6 +24,7 @@ public class GuessingNumberService {
     }
 
     public void init() {
+
         secret = random.nextInt(1, 11);
         guesses = new ArrayList<>();
     }
@@ -32,12 +37,12 @@ public class GuessingNumberService {
             guesses.add(guess + " is too big");
         } else {
             init();
-            return  "Correct, new game!";
+            return "Correct, new game!";
         }
         return "";
     }
 
-    public List<String> getGuesses(){
+    public List<String> getGuesses() {
         return guesses;
     }
 

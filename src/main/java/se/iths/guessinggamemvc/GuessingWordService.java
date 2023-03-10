@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Random;
 
 @Service
-//@SessionScope
+@SessionScope
 public class GuessingWordService {
 
 

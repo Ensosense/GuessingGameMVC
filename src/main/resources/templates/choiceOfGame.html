@@ -5,12 +5,17 @@
     <title>Choice</title>
 </head>
 <body>
-<h2 style="font-family: sans-serif">Please choose the game you want to play</h2>
+<h2 style="color: rosybrown; font-family: sans-serif" th:text="${welcome}"></h2>
+<h6 style="color: darkslateblue; font-family: sans-serif" th:text="${users}"></h6>
+<h3 style="font-family: sans-serif; color: darkolivegreen">Please choose the game you want to play</h3>
 <form method="post" action="http://localhost:8080/choice">
-        <label><input type="radio" name="choice" value="word"> Word game</label><br>
-        <label><input type="radio" name="choice" value="number"> Number game</label><br>
     <br>
-        <input type="submit" value="Submit">
-    </form>
+    <label><input type="radio" name="choice" value="word"> Word game</label><br>
+    <label><input type="radio" name="choice" value="number"> Number game</label><br>
+    <br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
 
 
